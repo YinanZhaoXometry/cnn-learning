@@ -1,0 +1,5 @@
+dataset-tiny-imagenet-200/
+
+.DS_Store
+
+__pycache__/

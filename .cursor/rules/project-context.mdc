@@ -1,0 +1,33 @@
+---
+description: 项目背景与上下文，每次对话自动加载
+globs:
+  - "**/*.ipynb"
+  - "**/*.py"
+alwaysApply: true
+---
+
+# 项目背景
+
+这是 **PolyU COMP5541（Machine Learning & Data Analytics）课程作业 Question 2**。
+
+## 核心任务
+用 PyTorch 从头实现 AlexNet，在 Tiny ImageNet-200（200类，64×64图）上训练和评估。
+
+## 关键文件
+- `COMP5541_AlexNet_TinyImageNet.ipynb`：主 Notebook，已运行完成
+- `dataset-tiny-imagenet-200/`：本地原始数据集（train/val/test）
+
+## 已完成的工作
+- AlexNet 模型已实现并训练 30 个 epoch
+- **最终测试准确率：40.86%**（200类，随机基线 0.5%）
+- 超参数：lr=0.01, batch=128, SGD+Nesterov, weight_decay=5e-4, dropout=0.5
+- 数据增强：RandomCrop(64, pad=4) + RandomHorizontalFlip
+
+## 待改进方向
+- 添加 `torch.save` 保存模型权重
+- 引入 Learning Rate Scheduler（如 CosineAnnealing）
+- 尝试更深的网络（ResNet、VGG等）对比
+- 添加 Top-5 准确率指标
+
+## 详细文档
+参见项目根目录 `README.md`
